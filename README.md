@@ -36,7 +36,7 @@ Sample constructed from:
 3. SEC Form D filings matched by firm name/location
 4. Founder race classification using:
   - DeepFace facial analysis
-  - NamePrism name analysis
+  - Name analysis
   - Manual verification of all Black founder classifications
 
     
