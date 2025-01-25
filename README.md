@@ -19,10 +19,10 @@ This repository contains the initial race classification algorithm used in "Fund
 
 ## Citation
 ```bibtex
-@article{cook2023funding,
- title={Funding Black High-Growth Startups},
- author={Cook, Lisa D and Marx, Matt and Yimfor, Emmanuel},
- journal={Journal of Finance},
- note={Forthcoming},
- year={2023}
+@article{yimfor2025funding,
+title={Funding Black High-Growth Startups},
+author={Yimfor, Emmanuel and Cook, Lisa D and Marx, Matt},
+journal={Journal of Finance},
+note={Forthcoming},
+year={2025}
 }
