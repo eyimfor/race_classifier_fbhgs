@@ -1,7 +1,7 @@
 # race_classifier_fbhgs
 # Race Classifier for "Funding Black High-Growth Startups"
 
-This repository contains the initial race classification algorithm used in "Funding Black High-Growth Startups" (Yimfor, Marx, and Cook, forthcoming in Journal of Finance). The classifier combines facial recognition technology (DeepFace) with Census surname data to predict founders' race. This served as a first-pass screening tool. All classifications were subsequently reviewed manually by multiple research assistants to ensure accuracy.
+This repository contains both the race classification code and dataset from "Funding Black High-Growth Startups" (Yimfor, Marx, and Cook, forthcoming in Journal of Finance). The dataset covers U.S.-based startups founded between 2000-2020 with founder information from PitchBook, merged with SEC Form D filings. The classifier combines facial recognition technology (DeepFace) with Census surname data to predict founders' race. This served as a first-pass screening tool. All classifications were subsequently reviewed manually by multiple research assistants to ensure accuracy.
 
 ## Setup
 1. Install required packages: `pip install -r requirements.txt`
@@ -21,11 +21,30 @@ This repository contains the initial race classification algorithm used in "Fund
 - numpy
 - scikit-learn
 
+## File Contents
+`Funding_Black_High-Growth_Startups_DataSet_09_30_2024.xlsx` contains:
+- `cik`: Form D filer unique identifier
+- `formdfilingurl`: Link to Form D filing
+- `entityname`: Startup name from Form D
+- `nameformd`: Founder name from Form D
+- `std_url`: Founder's LinkedIn URL
+
+## Data Collection
+Sample constructed from:
+1. PitchBook data on U.S. startups (2000-2020)
+2. Profile images from public sources
+3. SEC Form D filings matched by firm name/location
+4. Founder race classification using:
+  - DeepFace facial analysis
+  - NamePrism name analysis
+  - Manual verification of all Black founder classifications
+
+    
 ## Usage
 ```bash
 python race_classifier_fbhgs.py <input_folder> <output_folder>
 
-## Citation
+### Citation
 ```bibtex
 @article{yimfor2025funding,
 title={Funding Black High-Growth Startups},
