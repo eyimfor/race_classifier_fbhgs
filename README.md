@@ -1,7 +1,11 @@
 # race_classifier_fbhgs
 # Race Classifier for "Funding Black High-Growth Startups"
 
-This repository contains the initial race classification algorithm used in "Funding Black High-Growth Startups" (Cook, Marx, and Yimfor, forthcoming in Journal of Finance). The classifier, which combines facial recognition technology (DeepFace) with Census surname data, served as a first-pass screening tool. All classifications were subsequently reviewed manually to ensure accuracy, with disagreements resolved through additional review. The final race classifications in the paper reflect this thorough clerical review process rather than solely algorithmic predictions.
+This repository contains the initial race classification algorithm used in "Funding Black High-Growth Startups" (Yimfor, Marx, and Cook, forthcoming in Journal of Finance). The classifier combines facial recognition technology (DeepFace) with Census surname data to predict founders' race. This served as a first-pass screening tool. All classifications were subsequently reviewed manually by multiple research assistants to ensure accuracy.
+
+## Setup
+1. Install required packages: `pip install -r requirements.txt`
+2. Download `yimfor_random_forest_model.zip` and extract `yimfor_random_forest_model.sav` to the same directory as the code
 
 ## Features
 - Processes images named as 'Firstname_Lastname_ID'
@@ -16,6 +20,10 @@ This repository contains the initial race classification algorithm used in "Fund
 - pandas
 - numpy
 - scikit-learn
+
+## Usage
+```bash
+python race_classifier_fbhgs.py <input_folder> <output_folder>
 
 ## Citation
 ```bibtex
