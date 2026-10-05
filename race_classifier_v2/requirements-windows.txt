@@ -1,0 +1,11 @@
+# Windows, CPU only. Python 3.11.
+# Same packages as requirements.txt, with a prebuilt dlib so nothing has to be compiled.
+ethnicolr2==0.3.3
+lightgbm==4.7.0
+transformers>=5.0
+scikit-learn>=1.9,<1.10
+pandas>=2.0
+numpy
+pillow
+huggingface_hub
+dlib-bin==20.0.1.post1

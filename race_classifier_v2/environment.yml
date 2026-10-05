@@ -1,0 +1,20 @@
+# Conda environment for race_classifier_v2 on Linux with an NVIDIA GPU.
+# Create it with:
+#   PYTHONNOUSERSITE=1 conda env create -f environment.yml
+# On a login node without a GPU, put CONDA_OVERRIDE_CUDA=12.0 in front as well.
+name: race_v2
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - dlib=19.24.6=cuda120*
+  - pip
+  - pip:
+      - ethnicolr2==0.3.3
+      - lightgbm==4.7.0
+      - transformers==5.18.0
+      - pandas==3.0.6
+      - pillow==12.3.0
+      - huggingface_hub==1.33.0
+variables:
+  PYTHONNOUSERSITE: "1"

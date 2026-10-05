@@ -1,7 +1,10 @@
 # race_classifier_fbhgs
 # Race Classifier for "Funding Black High-Growth Startups"
 
-This repository contains both the race classification code and dataset from "Funding Black High-Growth Startups" (Yimfor, Marx, and Cook, forthcoming in Journal of Finance). The dataset covers U.S.-based startups founded between 2000-2020 with founder information from PitchBook, merged with SEC Form D filings. The classifier combines facial recognition technology (DeepFace) with Census surname data to predict founders' race. This served as a first-pass screening tool. All classifications were subsequently reviewed manually by multiple research assistants to ensure accuracy.
+This repository contains both the race classification code and dataset from "Funding Black High-Growth Startups" (Cook, Marx, and Yimfor, Journal of Finance, 2026). The dataset covers U.S.-based startups founded between 2000-2020 with founder information from PitchBook, merged with SEC Form D filings. The classifier combines facial recognition technology (DeepFace) with Census surname data to predict founders' race. This served as a first-pass screening tool. All classifications were subsequently reviewed manually by multiple research assistants to ensure accuracy.
+
+## Version 2 of the classifier
+A newer classifier is in [`race_classifier_v2/`](race_classifier_v2/). It reads first and last name together, builds on FairFace for the face, and is much more accurate on Black, Hispanic, and Asian founders. The original classifier below is the one used in the paper and is unchanged.
 
 ## Setup
 1. Install required packages: `pip install -r requirements.txt`
@@ -43,13 +46,18 @@ Sample constructed from:
 ## Usage
 ```bash
 python race_classifier_fbhgs.py <input_folder> <output_folder>
+```
 
 ### Citation
 ```bibtex
-@article{yimfor2025funding,
+@article{cook2026funding,
 title={Funding Black High-Growth Startups},
-author={Yimfor, Emmanuel and Marx, Matt and Cook, Lisa D},
-journal={Journal of Finance},
-note={Forthcoming},
-year={2025}
+author={Cook, Lisa D. and Marx, Matt and Yimfor, Emmanuel},
+journal={The Journal of Finance},
+volume={81},
+number={3},
+pages={1619--1660},
+year={2026},
+doi={10.1111/jofi.70039}
 }
+```

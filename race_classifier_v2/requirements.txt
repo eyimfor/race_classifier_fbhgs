@@ -1,0 +1,13 @@
+# Python 3.11 or 3.12. Versions are the ones the models were trained / tested with.
+# ethnicolr2 pins torch==2.13.0, scikit-learn==1.9.0, joblib==1.5.3 and tqdm itself.
+ethnicolr2==0.3.3
+lightgbm==4.7.0
+transformers>=5.0
+scikit-learn>=1.9,<1.10   # the SigLIP2 probe and combiner are pickled sklearn/LightGBM objects
+pandas>=2.0
+numpy
+pillow
+huggingface_hub
+# dlib: building from pip needs cmake + a C++ compiler. Easier: conda install -c conda-forge dlib
+# (on a GPU machine the conda-forge CUDA build is much faster; it then *requires* a visible GPU)
+dlib>=19.24
